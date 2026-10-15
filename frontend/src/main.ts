@@ -27,7 +27,7 @@ app.innerHTML =
     </main>`;
 
 const formulario = document.querySelector<HTMLFormElement>("#form-tarefa");
-const campoTitulo = document.querySelector<HTMLFormElement>("#titulo");
+const campoTitulo = document.querySelector<HTMLInputElement>("#titulo");
 const lista = document.querySelector<HTMLDivElement>("#lista");
 const mensagem = document.querySelector<HTMLDivElement>("#mensagem");
 

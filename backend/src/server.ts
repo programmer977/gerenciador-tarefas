@@ -19,8 +19,6 @@ app.get("/api/tarefas", async (_req,res)=>{
     res.json(resultado.rows);
 });
 
-app.listen(PORT, "127.0.0.1", () => {console.log(`Servidor iniciado na porta ${PORT}`)});
-
 app.post("/api/tarefas", async (req,res)=>{
     const titulo = req.body?.titulo;
 
@@ -68,7 +66,7 @@ app.delete("/api/tarefas/:id",async(req,res)=>{
     if(resultado.rowCount===0){
         res.status(404).json({erro:"tarefa não encontrada"});
     }
-    res.status(204).send();
+    return res.status(204).send();
 })
 
 app.use(( erro: Error, _req: Request, res: Response, _next: NextFunction ) => {
